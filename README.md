@@ -10,7 +10,7 @@ Un proyecto de ayuda para repasar para la pc1
 ### Capa de persistencia
 * Define correctamente la interfaz de repositorio para cada entidad.
 * Define correctamente las configuraciones de conexión a base de datos en el archivo application.properties.
-* Define y usa por lo menos 4 query methods distribuidos entre las 4 interfaces de repositorios
+* Usa por lo menos 4 query methods distribuidos entre las 3 interfaces de repositorios
 
 ### Implementación de end-points
 * Implementar correctamente 8 endpoints solicitados sin ninguna falla de compilación.
