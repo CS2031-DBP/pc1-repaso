@@ -25,3 +25,25 @@ Un proyecto de ayuda para repasar para la pc1
 ### Testing
 * Usar Testcontainers para probar un repositorio que contiene funciones especiales.
 * Realiza pruebas para al menos dos endpoints de la aplicación
+
+## Problemática
+
+Tenemos un sistema de cursos en la universidad, cada curso cuenta con un profesor y varios estudiantes. Cada estudiante puede inscribirse en varios cursos y cada curso puede tener varios estudiantes inscritos. Cada curso tiene un nombre, una descripción y un código. Cada profesor tiene un nombre, un correo y una contraseña. Cada estudiante tiene un nombre, un correo y una contraseña.
+Los alumnos pueden inscribirse en los cursos, pero solo pueden inscribirse si el curso tiene cupos disponibles. Los cursos tienen un cupo máximo de 10 estudiantes.
+
+Los alumnos pueden realizar las siguientes acciones:
+* Listar los cursos en los que está inscrito.
+* Listar los cursos con cupos disponibles.
+* Inscribirse en un curso.
+* Desinscribirse de un curso.
+
+Los profesores pueden realizar las siguientes acciones:
+* Listar los cursos que dicta.
+* Listar los estudiantes inscritos en un curso.
+* Crear un curso.
+* Eliminar un curso.
+* Actualizar un curso.
+* Actualizar la información de un estudiante.
+* Eliminar un estudiante.
+* Agregar un estudiante a un curso.
+* Eliminar un estudiante de un curso.
