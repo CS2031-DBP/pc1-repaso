@@ -13,7 +13,7 @@ Un proyecto de ayuda para repasar para la pc1
 * Usa por lo menos 4 query methods distribuidos entre las 3 interfaces de repositorios
 
 ### Implementación de end-points
-* Implementar correctamente 8 endpoints solicitados sin ninguna falla de compilación.
+* Implementar correctamente 13 endpoints solicitados sin ninguna falla de compilación.
 
 ### Manejo de excepciones
 * Implementar 3 clases propias de excepción y las añadirlas correctamente al controlador global de excepciones.
