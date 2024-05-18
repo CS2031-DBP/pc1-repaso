@@ -19,4 +19,6 @@ public class StudentController {
     public ResponseEntity<List<Course>>  ListarCursosInscrito(@PathVariable Long id) {
         return ResponseEntity.ok(studentService.ListarCursosInscrito(id));
     }
+
+
 }

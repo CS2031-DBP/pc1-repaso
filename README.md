@@ -32,10 +32,10 @@ Tenemos un sistema de cursos en la universidad, cada curso cuenta con un profeso
 Los alumnos pueden inscribirse en los cursos, pero solo pueden inscribirse si el curso tiene cupos disponibles. Los cursos tienen un cupo máximo de 10 estudiantes.
 
 Los alumnos pueden realizar las siguientes acciones:
-* Listar los cursos en los que está inscrito. (ListarCursosInscrito / StudentService) Implementado a nivel de service y controller
-* Listar los cursos con cupos disponibles. (ListarCursosConVacantes / CourseService) Implementado a nivel de service y controller
-* Inscribirse en un curso. (InscribirAlumno / CourseService) Implementado a nivel de service
-* Desinscribirse de un curso. (DesinscribirAlumno / CourseService) Implementado a nivel de service
+* Listar los cursos en los que está inscrito. (ListarCursosInscrito / StudentService)
+* Listar los cursos con cupos disponibles. (ListarCursosConVacantes / CourseService) 
+* Inscribirse en un curso. (InscribirAlumno / CourseService)
+* Desinscribirse de un curso. (DesinscribirAlumno / CourseService)
 
 Los profesores pueden realizar las siguientes acciones:
 * Listar los cursos que dicta.

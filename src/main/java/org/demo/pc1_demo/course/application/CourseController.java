@@ -4,10 +4,7 @@ import org.demo.pc1_demo.course.domain.Course;
 import org.demo.pc1_demo.course.domain.CourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -19,8 +16,20 @@ public class CourseController {
     CourseService courseService;
 
     @GetMapping()
-    public ResponseEntity<List<Course>> getCourseSpotsAvailable() {
+    public ResponseEntity<List<Course>> ListarCursosConVacantes() {
         return ResponseEntity.ok(courseService.ListarCursosConVacantes());
+    }
+
+    @PatchMapping("/{courseId}/student/{studentId}")
+    public ResponseEntity<Void> InscribirAlumno(@PathVariable Long courseId, @PathVariable Long studentId) {
+        courseService.InscribirAlumno(courseId, studentId);
+        return ResponseEntity.ok().build();
+    }
+
+    @DeleteMapping("/{courseId}/student/{studentId}")
+    public ResponseEntity<Void> DesinscribirAlumno(@PathVariable Long courseId, @PathVariable Long studentId) {
+        courseService.DesinscribirAlumno(courseId, studentId);
+        return ResponseEntity.ok().build();
     }
 
 }
