@@ -30,7 +30,7 @@ public class CourseController {
     @DeleteMapping("/{courseId}/student/{studentId}")
     public ResponseEntity<Void> DesinscribirAlumno(@PathVariable Long courseId, @PathVariable Long studentId) {
         courseService.DesinscribirAlumno(courseId, studentId);
-        return ResponseEntity.ok().build();
+        return ResponseEntity.noContent().build();
     }
 
     @GetMapping("/{id}/students")
