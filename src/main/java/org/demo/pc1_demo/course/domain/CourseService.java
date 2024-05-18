@@ -63,4 +63,44 @@ public class CourseService {
 
         return courseRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Course not found"));
     }
+
+    public List<Student> ListarAlumnosInscritos(Long id){
+        String role = authorizationUtils.getCurrentUserRole();
+        if(role.equals("ROLE_TEACHER")){
+            Course course = courseRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Course not found"));
+            return course.getStudents();
+        }
+        throw new UnauthorizeOperationException("User has no permission to modify this resource");
+    }
+
+    public Course CrearCurso(Course course){
+        String role = authorizationUtils.getCurrentUserRole();
+        if(role.equals("ROLE_TEACHER")){
+            return courseRepository.save(course);
+        }
+        throw new UnauthorizeOperationException("User has no permission to modify this resource");
+    }
+
+    public Course ActualizarCurso(Long id, Course course){
+        String role = authorizationUtils.getCurrentUserRole();
+        if(role.equals("ROLE_TEACHER")){
+            Course courseToUpdate = courseRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Course not found"));
+            courseToUpdate.setTitle(course.getTitle());
+            return courseRepository.save(courseToUpdate);
+        }
+        throw new UnauthorizeOperationException("User has no permission to modify this resource");
+    }
+
+    public void EliminarCurso(Long id){
+        String role = authorizationUtils.getCurrentUserRole();
+        if(role.equals("ROLE_TEACHER")){
+            Course course = courseRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("Course not found"));
+            courseRepository.delete(course);
+            return;
+        }
+        throw new UnauthorizeOperationException("User has no permission to modify this resource");
+    }
+
+
+
 }

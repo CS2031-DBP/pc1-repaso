@@ -31,5 +31,31 @@ public class StudentService {
         return student.map(value -> courseRepository.findCourseByStudentsContaining(value)).orElse(null);
     }
 
+    public Student ActualizarEstudiante(Long id, Student student){
+        String role = authorizationUtils.getCurrentUserRole();
+
+        if(!role.equals("ROLE_TEACHER"))
+            throw new UnauthorizeOperationException("User has no permission to modify this resource");
+
+        Optional<Student> studentOptional = studentRepository.findById(id);
+        if(studentOptional.isEmpty()) throw new IllegalArgumentException("Student not found");
+
+        Student studentToUpdate = studentOptional.get();
+        studentToUpdate.setName(student.getName());
+
+        return studentRepository.save(studentToUpdate);
+    }
+
+    public void EliminarEstudiante(Long id){
+        String role = authorizationUtils.getCurrentUserRole();
+
+        if(!role.equals("ROLE_TEACHER"))
+            throw new UnauthorizeOperationException("User has no permission to modify this resource");
+
+        Optional<Student> student = studentRepository.findById(id);
+        if(student.isEmpty()) throw new IllegalArgumentException("Student not found");
+
+        studentRepository.delete(student.get());
+    }
 
 }

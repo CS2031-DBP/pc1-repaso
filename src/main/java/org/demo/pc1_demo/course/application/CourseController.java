@@ -2,6 +2,7 @@ package org.demo.pc1_demo.course.application;
 
 import org.demo.pc1_demo.course.domain.Course;
 import org.demo.pc1_demo.course.domain.CourseService;
+import org.demo.pc1_demo.student.domain.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -30,6 +31,27 @@ public class CourseController {
     public ResponseEntity<Void> DesinscribirAlumno(@PathVariable Long courseId, @PathVariable Long studentId) {
         courseService.DesinscribirAlumno(courseId, studentId);
         return ResponseEntity.ok().build();
+    }
+
+    @GetMapping("/{id}/students")
+    public ResponseEntity<List<Student>> ListarAlumnosInscritos(@PathVariable Long id) {
+        return ResponseEntity.ok(courseService.ListarAlumnosInscritos(id));
+    }
+
+    @PostMapping()
+    public ResponseEntity<Course> CrearCurso(@RequestBody Course course) {
+        return ResponseEntity.ok(courseService.CrearCurso(course));
+    }
+
+    @PatchMapping("/{id}")
+    public ResponseEntity<Course> ActualizarCurso(@PathVariable Long id, @RequestBody Course course) {
+        return ResponseEntity.ok(courseService.ActualizarCurso(id, course));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> EliminarCurso(@PathVariable Long id) {
+        courseService.EliminarCurso(id);
+        return ResponseEntity.noContent().build();
     }
 
 }

@@ -39,11 +39,11 @@ Los alumnos pueden realizar las siguientes acciones:
 
 Los profesores pueden realizar las siguientes acciones:
 * Listar los cursos que dicta. (ListarCursosDictados / TeacherService)
-* Listar los estudiantes inscritos en un curso.
-* Crear un curso.
-* Eliminar un curso.
-* Actualizar un curso.
-* Actualizar la información de un estudiante.
-* Eliminar un estudiante.
-* Agregar un estudiante a un curso.
-* Eliminar un estudiante de un curso.
+* Listar los estudiantes inscritos en un curso. (ListarEstudiantesInscritos / CourseService)
+* Crear un curso. (CrearCurso / CourseService)
+* Eliminar un curso. (EliminarCurso / CourseService)
+* Actualizar un curso. (ActualizarCurso / CourseService)
+* Actualizar la información de un estudiante. (ActualizarEstudiante / StudentService)
+* Eliminar un estudiante. (EliminarEstudiante / StudentService)
+* Agregar un estudiante a un curso. (InscribirAlumno / CourseService)
+* Eliminar un estudiante de un curso. (DesinscribirAlumno / CourseService)

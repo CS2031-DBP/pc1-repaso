@@ -1,6 +1,7 @@
 package org.demo.pc1_demo.student.application;
 
 import org.demo.pc1_demo.course.domain.Course;
+import org.demo.pc1_demo.student.domain.Student;
 import org.demo.pc1_demo.student.domain.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -20,5 +21,15 @@ public class StudentController {
         return ResponseEntity.ok(studentService.ListarCursosInscrito(id));
     }
 
+    @PatchMapping("/{id}")
+    public ResponseEntity<Student> ActualizarEstudiante(@PathVariable Long id, @RequestBody Student student) {
+        return ResponseEntity.ok(studentService.ActualizarEstudiante(id, student));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> EliminarEstudiante(@PathVariable Long id) {
+        studentService.EliminarEstudiante(id);
+        return ResponseEntity.noContent().build();
+    }
 
 }
