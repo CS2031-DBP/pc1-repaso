@@ -38,7 +38,7 @@ Los alumnos pueden realizar las siguientes acciones:
 * Desinscribirse de un curso. (DesinscribirAlumno / CourseService)
 
 Los profesores pueden realizar las siguientes acciones:
-* Listar los cursos que dicta.
+* Listar los cursos que dicta. (ListarCursosDictados / TeacherService)
 * Listar los estudiantes inscritos en un curso.
 * Crear un curso.
 * Eliminar un curso.
