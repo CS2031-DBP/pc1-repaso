@@ -45,7 +45,6 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         return e.getMessage();
     }
 
-
     @ExceptionHandler(UnauthorizeOperationException.class)
     @ResponseStatus(HttpStatus.FORBIDDEN)
     public String handleUnauthorizeOperationException(UnauthorizeOperationException e) {

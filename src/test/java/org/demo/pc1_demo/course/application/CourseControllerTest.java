@@ -16,8 +16,6 @@ import static org.springframework.http.MediaType.APPLICATION_JSON;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
-
-
 @SpringBootTest
 @AutoConfigureMockMvc
 public class CourseControllerTest {
@@ -59,6 +57,12 @@ public class CourseControllerTest {
                 .header("Authorization", "Bearer " + token)
                 .contentType(APPLICATION_JSON)
                 .content("{ \"title\": \"Math\"}"));
+
+        //Create a course
+        mockMvc.perform(post("/course")
+                .header("Authorization", "Bearer " + token)
+                .contentType(APPLICATION_JSON)
+                .content("{ \"title\": \"Comu\"}"));
     }
 
     //Test the following endpoints
@@ -146,7 +150,7 @@ public class CourseControllerTest {
     public void EliminarCurso() throws Exception {
         //Si corren todos los test, este test fallará porque el curso va a estar tener un estudiante
 
-        mockMvc.perform(delete("/course/1")
+        mockMvc.perform(delete("/course/2")
                 .header("Authorization", "Bearer " + token))
                 .andExpect(status().isNoContent());
     }

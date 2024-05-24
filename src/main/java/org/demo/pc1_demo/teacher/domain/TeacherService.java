@@ -4,7 +4,6 @@ import org.demo.pc1_demo.auth.utils.AuthorizationUtils;
 import org.demo.pc1_demo.course.domain.Course;
 import org.demo.pc1_demo.course.infrastructure.CourseRepository;
 import org.demo.pc1_demo.exceptions.UnauthorizeOperationException;
-import org.demo.pc1_demo.student.domain.Student;
 import org.demo.pc1_demo.teacher.infrastructure.TeacherRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

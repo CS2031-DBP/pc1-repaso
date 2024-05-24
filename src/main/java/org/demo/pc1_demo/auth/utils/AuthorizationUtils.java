@@ -16,7 +16,9 @@ public class AuthorizationUtils {
 
     public boolean isAdminOrResourceOwner(Long id) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
         UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+
         String username = userDetails.getUsername();
         String role = userDetails.getAuthorities().toArray()[0].toString();
         User student= userService.findByEmail(username, role);

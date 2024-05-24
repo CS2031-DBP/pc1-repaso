@@ -25,14 +25,12 @@ public class AuthService {
     private final BaseUserRepository<User> userRepository;
     private final JwtService jwtService;
     private final PasswordEncoder passwordEncoder;
-    private final ModelMapper modelMapper;
 
     @Autowired
     public AuthService(BaseUserRepository<User> userRepository, JwtService jwtService, PasswordEncoder passwordEncoder) {
         this.userRepository = userRepository;
         this.jwtService = jwtService;
         this.passwordEncoder = passwordEncoder;
-        this.modelMapper = new ModelMapper();
     }
 
     public JwtAuthResponse login(LoginReq req) {
