@@ -1,0 +1,4 @@
+org/demo/pc1_demo/course/infrastructure/CourseRepositoryTest.class
+org/demo/pc1_demo/TestContainer.class
+org/demo/pc1_demo/Pc1DemoApplicationTests.class
+org/demo/pc1_demo/course/application/CourseControllerTest.class

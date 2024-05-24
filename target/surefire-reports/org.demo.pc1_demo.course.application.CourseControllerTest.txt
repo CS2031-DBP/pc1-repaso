@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: org.demo.pc1_demo.course.application.CourseControllerTest
+-------------------------------------------------------------------------------
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.100 s -- in org.demo.pc1_demo.course.application.CourseControllerTest
