@@ -1,10 +1,5 @@
 # repaso-a-cloud: Despliegue de una Aplicación Spring Boot en Amazon Web Services
 
-## Instrucciones :page_facing_up:
-
-- Individual.
-- Tiempo 120 minutos.
-
 ## Introducción :mega:
 
 En este laboratorio, aprenderás cómo desplegar una aplicación web desarrollada con Spring Boot en [Amazon Web Services (AWS)](https://aws.amazon.com/). Utilizaremos varios servicios de AWS, incluyendo [AWS EC2](https://aws.amazon.com/es/ec2/) para ejecutar la aplicación, [AWS S3](https://aws.amazon.com/es/s3) para almacenar el proyecto empaquetado y [AWS RDS](https://aws.amazon.com/es/rds) con PostgreSQL como base de datos. Este laboratorio te proporcionará experiencia práctica en el despliegue de aplicaciones en la nube utilizando servicios populares de AWS. Sin embargo, debes notar que el proceso que vamos a seguir es manual, más adelante, durante el curso, aprenderemos a automatizarlo.
